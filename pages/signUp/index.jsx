@@ -1,41 +1,29 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TextInput, Pressable, Image, ScrollView, KeyboardAvoidingView , Button} from 'react-native'
-import styles from './styles'
+import { View, Text, TextInput, Pressable, Image, ScrollView, KeyboardAvoidingView } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import axios from 'axios'
 import logomarca from '../../assets/logoMarca.png'
+import styles from './styles'
 
-export default function Login({ navigation }) {
+export default function SignUo({ navigation }) {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('')
     const [token, setToken] = useState(null)
+ 
 
-    useEffect(() => {
-        // Verifica se o token não é null antes de salvá-lo no AsyncStorage
-        if (token !== null) {
-            AsyncStorage.setItem('token', token)
-                .then(() => {
-                    console.log("Token SignIn: ", token)
-                    console.log("Token sucesso!")
-                })
-                .catch((error) => {
-                    console.error("Erro ao salvar o token: ", error);
-                });
-        }
-    }, [token])
-
-    const fetchToken = async () => {
+    const cadastrarUsuario = async () => {
         try {
             const response = await axios.post(
-                'http:/adamFilho.pythonanywhere.com/api/token/',
+                'http:/adamFilho.pythonanywhere.com/api/create_user/',
                 {
                     username: user,
                     password: password
                 }
             )
             console.log(response.data.access)
-            setToken(response.data.access)
-            navigation.navigate('Home')
+
+            navigation.navigate('SignUp')
 
         } catch (error) {
             console.error("Deu Erro:", error);
@@ -44,13 +32,22 @@ export default function Login({ navigation }) {
 
     return (
         <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
-            <View>
-                <Image style={styles.logomarca} source={logomarca} />
-            </View>
+            <Text style={styles.title}>
+               SignUp
+            </Text>
+            <Text style={styles.title}>
+               Faça o seu cadastro
+            </Text>
             <TextInput
                 placeholder='user'
                 onChangeText={setUser}
                 value={user}
+                style={styles.caixa}
+            />
+             <TextInput
+                placeholder='email'
+                onChangeText={setEmail}
+                value={email}
                 style={styles.caixa}
             />
             <TextInput
@@ -63,11 +60,10 @@ export default function Login({ navigation }) {
 
             <Pressable
                 style={styles.btnLogin}
-                onPress={fetchToken}
+                onPress={cadastrarUsuario}
             >
-                <Text style={{ fontSize: 20 }}>Login</Text>
+                <Text style={{ fontSize: 20 }}>Cadastrar</Text>
             </Pressable>
-            <Button title="Sign Up" onPress={()=>{navigation.navigate('SignUp')}} />
         </ScrollView>
     )
 }

@@ -7,6 +7,7 @@ import Login from './pages/login/login';
 import Map from './pages/mapa/mapa';
 import Modal from './pages/modal/modal';
 import Home from './pages/home';
+import SignUo from './pages/signUp';
 
 
 const  Pilha = createStackNavigator()
@@ -104,6 +105,11 @@ export default function Routers() {
                 <Pilha.Screen
                     name="SignIn"
                     component={Login}
+                    options={{ headerShown: false }}
+                />
+                 <Pilha.Screen
+                    name="Cadastro"
+                    component={SignUo}
                     options={{ headerShown: false }}
                 />
 
