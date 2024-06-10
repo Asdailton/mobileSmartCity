@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black'
   },
   title: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 10,
     color:'white'
@@ -29,12 +29,16 @@ const styles = StyleSheet.create({
     borderColor: 'red',
   },
   descricao: {
+   backgroundColor:'#202020',
     alignItems: 'center',
     marginBottom: 10,
+    padding: 15,
+    marginTop: 20,
+    borderRadius: 10,
     
   },
   distanceText: {
-    fontSize: 16,
+    fontSize: 18,
     color:'white',
   },
   modalView: {
@@ -72,14 +76,15 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
   closeButton: {
-    backgroundColor: '#2196F3',
+    backgroundColor: '#84E4C7',
     borderRadius: 20,
     padding: 10,
     elevation: 2,
-    marginTop: 10
+    marginTop: 10,
+    
   },
   closeButtonText: {
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
     textAlign: 'center'
   }

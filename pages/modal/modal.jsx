@@ -45,6 +45,8 @@ const Modal = () => {
       <Text style={styles.sensorName}>{item.id}</Text>
       <Text style={styles.sensorValue}>{item.tipo}</Text>
       <Text styles={styles.sensorValue}>{item.responsavel}</Text>
+      <Text styles={styles.sensorValue}>{item.localizacao}</Text>
+      <Text styles={styles.sensorValue}>{item.status_operacional}</Text>
     </View>
   );
 

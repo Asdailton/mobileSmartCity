@@ -11,7 +11,7 @@ export default function Login({ navigation }) {
     const [token, setToken] = useState(null)
 
     useEffect(() => {
-        // Verifica se o token não é null antes de salvá-lo no AsyncStorage
+    
         if (token !== null) {
             AsyncStorage.setItem('token', token)
                 .then(() => {
@@ -67,7 +67,7 @@ export default function Login({ navigation }) {
             >
                 <Text style={{ fontSize: 20 }}>Login</Text>
             </Pressable>
-            <Button title="Sign Up" onPress={()=>{navigation.navigate('SignUp')}} />
+            <Button title="Sign Up" onPress={()=>{navigation.navigate('Cadastro')}} />
         </ScrollView>
     )
 }
