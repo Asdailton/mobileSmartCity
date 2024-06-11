@@ -7,7 +7,25 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         flex:1,
     },
+    titleConteiner:{
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
     
+    title:{
+        fontSize: 35,
+        color:'#84E4C7'
+    },
+    temperaturaConteiner:{
+        backgroundColor: '#313131',
+        padding: 5,
+        width: '90%'
+    },
+    titleTemperatura:{
+        fontSize: 27,
+        color:'#84E4C7'
+    }
+
     
 })
 

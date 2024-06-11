@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TextInput, Pressable, Image, ScrollView, KeyboardAvoidingView , Button} from 'react-native'
+import { View, Text, TextInput, Pressable, Image, ScrollView, KeyboardAvoidingView , TouchableOpacity} from 'react-native'
 import styles from './styles'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import axios from 'axios'
@@ -33,6 +33,7 @@ export default function Login({ navigation }) {
                     password: password
                 }
             )
+            AsyncStorage.setItem('username', user)
             console.log(response.data.access)
             setToken(response.data.access)
             navigation.navigate('Home')
@@ -67,7 +68,19 @@ export default function Login({ navigation }) {
             >
                 <Text style={{ fontSize: 20 }}>Login</Text>
             </Pressable>
-            <Button title="Sign Up" onPress={()=>{navigation.navigate('Cadastro')}} />
+
+            <View style={styles.signInConteiner}>
+                <Text style={styles.textSign}> New here?</Text>
+                <TouchableOpacity
+                     // Defina a cor do texto
+                    onPress={() => { navigation.navigate('Cadastro') }}
+                    >
+                    <Text style={styles.btnSignIn}>Sign Up</Text>
+                </TouchableOpacity>
+
+
+            </View>
+            
         </ScrollView>
     )
 }

@@ -22,9 +22,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   customMarker: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
+    width: 20,
+    height: 20,
+    borderRadius: 10,
     borderWidth: 1,
     borderColor: 'red',
   },

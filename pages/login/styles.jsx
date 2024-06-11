@@ -35,6 +35,23 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
     },
+    signInConteiner:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        
+    },
+    textSign:{
+        fontSize: 17,
+        color: 'white'
+    },
+    btnSignIn:{
+        fontSize: 17,
+        color:'#84E4C7',
+        margin: 10
+        
+       
+    }
+
     
 })
 

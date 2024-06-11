@@ -42,12 +42,8 @@ const Map = ({ navigation }) => {
         setLocation(newLocation.coords);
       };
 
-      updateLocation(); // Update location immediately
-
-      // Set interval to update location every 2 seconds
+      updateLocation(); 
       const intervalId = setInterval(updateLocation, 2000);
-
-      // Clean up interval on component unmount
       return () => clearInterval(intervalId);
     };
 
@@ -55,7 +51,7 @@ const Map = ({ navigation }) => {
   }, []);
 
   const fetchSensors = async (token) => {
-    const sensorIds = [1, 3, 5, 13];
+    const sensorIds = [1, 3, 5, 13, 24, 30];
     const sensorsData = [];
 
     try {
@@ -92,7 +88,7 @@ const Map = ({ navigation }) => {
   const calculateDistance = (point1, point2) => {
     if (!point1 || !point2) return 0;
 
-    const R = 6371e3; // Radius of the Earth in meters
+    const R = 6371e3; 
     const lat1 = point1.latitude * Math.PI / 180;
     const lat2 = point2.latitude * Math.PI / 180;
     const deltaLat = (point2.latitude - point1.latitude) * Math.PI / 180;

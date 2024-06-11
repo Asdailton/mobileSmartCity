@@ -8,13 +8,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#333', // Cor de fundo preta
       },
       title: {
-        marginTop: 50,
+        marginTop: 70,
         fontSize: 30,
         color: '#fff', // Cor do texto branca
         marginBottom: 10,
       },
       lista: {
-        marginTop: 40,
+        marginTop: 20,
         width: '80%', // Largura da lista
         height: '80%', // Altura da lista
         backgroundColor: '#333', // Cor de fundo preta
@@ -29,11 +29,11 @@ const styles = StyleSheet.create({
       },
       sensorName: {
         fontSize: 16,
-        color: '#84E4C7', // Cor do texto branca
+        color: '#84E4C7', 
       },
       sensorValue: {
         fontSize: 14,
-        color: '#aaa', // Cor do texto cinza
+        color: 'white', 
       },
     });
   
