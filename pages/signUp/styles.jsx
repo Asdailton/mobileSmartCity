@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
         backgroundColor:'#414040',
         
     },
+    title:{
+        fontSize: 35,
+        color:'#84E4C7'
+    },
     logomarca:{
        marginBottom: 20
     },

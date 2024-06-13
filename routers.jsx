@@ -7,10 +7,9 @@ import Login from './pages/login/login';
 import Map from './pages/mapa/mapa';
 import Modal from './pages/modal/modal';
 import Home from './pages/home';
-import SignUo from './pages/signUp';
+import SignUp from './pages/signUp'; // Importe SignUp aqui
 
-
-const  Pilha = createStackNavigator()
+const Pilha = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
@@ -26,7 +25,6 @@ function MyTabs() {
                 tabBarActiveTintColor: '#84E4C7',
                 tabBarInactiveTintColor: '#555'
             }}
-
         >
             <Tab.Screen
                 name="SignIn"
@@ -39,22 +37,11 @@ function MyTabs() {
                     )
                 }}
             />
-            {/* <Tab.Screen
-                name="SignUp"
-                component={SignUp}
-                options={{
-                    headerShown: false,
-                    tabBarStyle: { display: 'none' },
-                    tabBarIcon: ({ size, color }) => (
-                        <Feather name="user" size={size} color={color} />
-                    )
-                }}
-            /> */}
             <Tab.Screen
                 name="Home"
                 component={Home}
                 options={{
-                    headerShown:false,
+                    headerShown: false,
                     tabBarIcon: ({ size, color }) => (
                         <Feather name="home" size={size} color={color} />
                     )
@@ -64,33 +51,25 @@ function MyTabs() {
                 name="Mapa"
                 component={Map}
                 options={{
-                    headerShown:false,
+                    headerShown: false,
                     tabBarIcon: ({ size, color }) => (
                         <Feather name="map" size={size} color={color} />
                     )
                 }}
             />
-             <Tab.Screen
+            <Tab.Screen
                 name="Detalhes"
                 component={Modal}
                 options={{
-                    headerShown:false,
+                    headerShown: false,
                     tabBarIcon: ({ size, color }) => (
                         <Feather name="custom-icon" size={size} color={color} />
-
                     )
                 }}
             />
-               
-            
-          
-         
-           
         </Tab.Navigator>
     );
 }
-
-
 
 export default function Routers() {
     return (
@@ -101,42 +80,11 @@ export default function Routers() {
                     component={MyTabs}
                     options={{ headerShown: false }}
                 />
-              
                 <Pilha.Screen
-                    name="SignIn"
-                    component={Login}
+                    name="SignUp"
+                    component={SignUp}
                     options={{ headerShown: false }}
                 />
-                 <Pilha.Screen
-                    name="Cadastro"
-                    component={SignUo}
-                    options={{ headerShown: false }}
-                />
-
-
-                <Pilha.Screen
-                    name="Home"
-                    component={Home}
-                    options={{ headerShown: false }}
-                />
-                <Pilha.Screen
-                    name="Mapa"
-                    component={Map}
-                    options={{ headerShown: false }}
-                />
-
-                <Pilha.Screen
-                    name="Modal"
-                    component={Modal}
-                    options={{ headerShown: false }}
-                />
-
-                
-
-
-
-
-
             </Pilha.Navigator>
         </NavigationContainer>
     )

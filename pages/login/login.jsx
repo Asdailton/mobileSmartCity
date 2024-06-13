@@ -53,6 +53,7 @@ export default function Login({ navigation }) {
                 onChangeText={setUser}
                 value={user}
                 style={styles.caixa}
+                placeholderTextColor="#aaa" 
             />
             <TextInput
                 placeholder='password'
@@ -60,6 +61,7 @@ export default function Login({ navigation }) {
                 value={password}
                 style={styles.caixa}
                 secureTextEntry={true}
+                placeholderTextColor="#aaa" 
             />
 
             <Pressable
@@ -68,18 +70,12 @@ export default function Login({ navigation }) {
             >
                 <Text style={{ fontSize: 20 }}>Login</Text>
             </Pressable>
-
-            <View style={styles.signInConteiner}>
-                <Text style={styles.textSign}> New here?</Text>
-                <TouchableOpacity
+            <TouchableOpacity
                      // Defina a cor do texto
-                    onPress={() => { navigation.navigate('Cadastro') }}
+                    onPress={() => { navigation.navigate('SignUp') }}
                     >
                     <Text style={styles.btnSignIn}>Sign Up</Text>
                 </TouchableOpacity>
-
-
-            </View>
             
         </ScrollView>
     )
