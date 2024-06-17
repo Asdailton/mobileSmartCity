@@ -44,15 +44,16 @@ const Modal = () => {
     <View style={styles.card}>
       <Text style={styles.sensorName}>{item.id}</Text>
       <Text style={styles.sensorName}>{item.tipo}</Text>
-      <Text styles={styles.sensorValue}>{item.responsavel}</Text>
-      <Text styles={styles.sensorValue}>{item.localizacao}</Text>
-      <Text styles={styles.sensorValue}>{item.status_operacional}</Text>
+      <Text style={[styles.sensorValue, { color: '#fff' }]}>{item.responsavel}</Text>
+      <Text style={styles.sensorValue}>{item.localizacao}</Text>
+      <Text style={styles.sensorValue}>{item.status_operacional}</Text>
     </View>
+
   );
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Detalhes <Text style={{ color: '#84E4C7' }}>dos Sensores</Text></Text>
+      <Text style={styles.title}>Lista de  <Text style={{ color: '#84E4C7' }}>Sensores</Text></Text>
       <FlatList
         style={styles.lista}
         data={sensores}

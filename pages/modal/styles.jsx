@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
       },
       sensorValue: {
         fontSize: 14,
-        color: 'white', 
+        color: '#ffff', 
       },
     });
   

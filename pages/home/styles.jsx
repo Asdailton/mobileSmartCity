@@ -13,10 +13,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        fontSize: 35,
+        fontSize: 30,
         color: '#84E4C7',
         marginBottom: 20, 
-        marginTop: 20, 
+        marginTop: 15,
+        fontWeight: 'bold', 
+        alignSelf: 'flex-start',
+
     },
     temperaturaConteiner: {
         backgroundColor: '#313131',
@@ -27,7 +30,7 @@ const styles = StyleSheet.create({
        
     },
     titleTemperatura: {
-        fontSize: 27,
+        fontSize: 24,
         color: '#84E4C7',
         marginBottom: 10,
     },
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
     banner: {
-        marginTop: 30,
+        marginTop: 25,
         width: '100%',
     },
     titleHistory:{
@@ -46,6 +49,18 @@ const styles = StyleSheet.create({
         color: '#84E4C7',
         marginBottom: 10,
         marginTop: 7
+    },
+    historyConteiner:{
+        flexDirection: 'column',
+        padding: 20,
+        borderRadius: 10,
+        backgroundColor: '#313131',
+        width: '90%',
+        marginTop: 18
+    },
+    textHistory:{
+        color: 'white',
+        fontSize: 15
     }
 
 });
